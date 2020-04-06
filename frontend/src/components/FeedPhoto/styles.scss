@@ -1,0 +1,67 @@
+.feed-photo {
+  @include boxBorder(yes);
+  width: 100%;
+  max-width: $max-card-width;
+  margin-bottom: 60px;
+
+  @include breakpoint("phone") {
+    background-color: transparent;
+    border: 0;
+    margin-bottom: 30px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .header {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+    overflow: hidden;
+
+    .image-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+      overflow: hidden;
+
+      .image {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .header-column {
+      display: flex;
+      flex-direction: column;
+
+      .creator {
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .location {
+        font-size: $small-font-size;
+      }
+    }
+  }
+
+  .post-image-wrapper {
+    max-width: $max-card-width;
+    height: auto;
+
+    img {
+      width: 100%;
+
+    }
+  }
+
+  .meta {
+    padding: 15px;
+    padding-bottom: 0;
+    padding-top: 10px;
+  }
+}
